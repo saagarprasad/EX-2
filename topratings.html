@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Top Ratings</title>
+</head>
+<body>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+    <body ng-app="">
+
+    Sort By: 
+    <select ng-model="myVar">
+    <option value="topratings">Top Ratings
+    <option value="moviename">Movie Name
+    <option value="yearofrelease">Year of Release
+    </select>
+
+    <hr>
+    <div ng-switch="myVar">
+    <div ng-switch-when="topratings">
+        <h1>Ratings</h1>
+        <p>List of Movies by Ratings</p>
+    </div>
+    <div ng-switch-when="moviename">
+        <h1>Movie Name</h1>
+        <p>Asccending Order</p>
+    </div>
+    <div ng-switch-when="yearofrelease">
+        <h1>Year Of Release</h1>
+        <p>Sort by date of Release</p>
+    </div>
+    <div ng-switch-default>
+        <h1>Switch</h1>
+        <p>Select topic from the dropdown, to switch the content of this DIV.</p>
+    </div>
+    </div>
+    <hr>
+
+    <p>The ng-switch directive hides and shows HTML sections depending on a certain value.</p>
+
+</body>
+</html>
